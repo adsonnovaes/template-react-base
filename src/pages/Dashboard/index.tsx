@@ -1,7 +1,22 @@
-export function Dashboard () {
+import { useEffect } from "react";
+import { Header } from "../../components/Header";
+
+import { Sidebar } from '../../components/Sidebar';
+
+import './styles.scss';
+
+export function Dashboard() {
+
+  useEffect(() => {
+    document.title = "Web | Dashboard";
+  }, [])
+
   return (
-    <div>
-      <h1>Dashboard</h1>
+    <div className="wrapper">
+      <Sidebar />
+      <main>
+        <Header/>
+      </main>
     </div>
   );
 }

@@ -4,9 +4,44 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background: #fff; 
+  --text-color: #858796;
+}
+
 body,
 input,
 button,
 textarea {
     font: 400 16px "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--background);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+
+  main {
+    flex: 1;
+  }
+
+  @media(max-width:472px) {
+    .sidebar-container{
+      display: none;
+    }
+  }
 }

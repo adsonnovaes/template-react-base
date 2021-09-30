@@ -1,0 +1,69 @@
+.sidebar-container {
+  background-color: #4e73df;
+  background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+
+  width: 14rem;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 773px) {
+    width: 6.5rem;
+  }
+
+  hr {
+    height: 1px;
+    border: 0px;
+
+    margin: 0.457rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  a {
+    color: #fff;
+    opacity: 0.6;
+  }
+
+  .active {
+    opacity: 1;
+  }
+
+  .home-link {
+    height: 4.375rem;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 0.05rem;
+    z-index: 1;
+  }
+
+  li {
+
+    a {
+      width: 14rem;
+
+      display: flex;
+      text-align: left;
+
+      gap: 8px;
+
+      padding: 1rem;
+
+      span {
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .margin-top {
+    margin-top: 1rem;
+  }
+}
