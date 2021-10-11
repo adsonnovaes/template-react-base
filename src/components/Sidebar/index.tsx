@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import { MdDashboard } from 'react-icons/md';
 import { AiOutlineAreaChart } from 'react-icons/ai';
 import { IoPeopleOutline } from 'react-icons/io5';
+
 import './styles.scss';
-import { Link } from 'react-router-dom';
 
 // Trocar as tags "a" por Link
 export function Sidebar() {
@@ -15,29 +17,29 @@ export function Sidebar() {
       <hr />
 
       <li>
-        <a 
-          href="/dashboard"
+        <Link 
+          to="/dashboard"
           className="active"
         >
           <MdDashboard />
           <span>Dashboard</span>
-        </a>
+        </Link>
       </li>
 
       <hr />
 
       <li className="margin-top">
-        <a href="/dashboard">
+        <Link  to="/dashboard/company">
           <AiOutlineAreaChart />
           <span>Empresa</span>
-        </a>
+        </Link >
       </li>
 
       <li>
-        <a href="/dashboard">
+        <Link  to="/dashboard">
           <IoPeopleOutline />
           <span>Funcionário</span>
-        </a>
+        </Link >
       </li>
 
     </ul>

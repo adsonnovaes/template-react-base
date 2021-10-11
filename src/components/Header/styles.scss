@@ -12,6 +12,10 @@
     span {
       display: none;
     }
+
+    .exit-container {
+      width: 2rem;
+    }
   }
 
   img {
@@ -22,10 +26,39 @@
   }
 
   > ul {
-    // background: palevioletred;
-
     display: flex;
     margin-right: 2rem;
+
+    .exit-container {
+      display: flex;
+      align-items: center;
+
+      button {
+        width: 4rem;
+        height: 2rem;
+
+        color: var(--text-color);
+        font-size: 80%;
+
+        padding: 0 0.5rem;
+        border-radius: 1rem;
+
+        outline: none;
+        background:transparent; 
+        border:none; 
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        transition: background 0.2s;
+
+        &:hover {
+          background: rgb(206, 227, 243);
+          color: rgb(71, 71, 71);
+        }
+      }
+    }
 
     .separator {
       width: 0;
@@ -35,8 +68,6 @@
     }
 
     > li {
-      // display: list-item;
-      // text-align: -webkit-match-parent;
       a {
         color: var(--text-color);
         height: 4.375rem;

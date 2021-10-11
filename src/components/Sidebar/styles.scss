@@ -11,6 +11,13 @@
 
   @media (max-width: 773px) {
     width: 6.5rem;
+    overflow: hidden;
+    li {
+      margin-left: 1.5rem;
+      span {
+        display: none;
+      }
+    }
   }
 
   hr {
@@ -24,6 +31,11 @@
   a {
     color: #fff;
     opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   .active {
@@ -36,7 +48,7 @@
     font-size: 1rem;
     font-weight: 800;
 
-    padding: 1.5rem 1rem;
+    padding: 2rem 1rem;
 
     text-align: center;
     text-transform: uppercase;

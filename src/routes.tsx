@@ -6,6 +6,7 @@ import {
 
 import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
+import { Company } from './pages/Company';
 
 function Routes () {
   return (
@@ -14,6 +15,8 @@ function Routes () {
         <Route exact path="/" component={Login} />
 
         <Route exact path="/dashboard" component={Dashboard} />
+
+        <Route exact path="/dashboard/company" component={Company} />
       </Switch>
     </BrowserRouter>
   );
