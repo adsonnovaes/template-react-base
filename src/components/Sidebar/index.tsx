@@ -6,8 +6,18 @@ import { IoPeopleOutline } from 'react-icons/io5';
 
 import './styles.scss';
 
+type SideBarProps = {
+  dashboardIsActive?: boolean;
+  companyIsActive?: boolean;
+  functionaryIsActive?: boolean;
+}
+
 // Trocar as tags "a" por Link
-export function Sidebar() {
+export function Sidebar({
+  dashboardIsActive, 
+  companyIsActive,
+  functionaryIsActive
+}: SideBarProps) {
   return (
     <ul className="sidebar-container">
       <Link className="home-link active" to="/dashboard">
@@ -19,7 +29,7 @@ export function Sidebar() {
       <li>
         <Link 
           to="/dashboard"
-          className="active"
+          className= {dashboardIsActive ? 'active' : ""}
         >
           <MdDashboard />
           <span>Dashboard</span>
@@ -29,14 +39,20 @@ export function Sidebar() {
       <hr />
 
       <li className="margin-top">
-        <Link  to="/dashboard/company">
+        <Link  
+          to="/dashboard/company"
+          className={companyIsActive ? 'active' : ""}
+        >
           <AiOutlineAreaChart />
           <span>Empresa</span>
         </Link >
       </li>
 
       <li>
-        <Link  to="/dashboard">
+        <Link  
+          to="/dashboard/functionary"
+          className= {functionaryIsActive ? 'active' : ""}
+        >
           <IoPeopleOutline />
           <span>Funcionário</span>
         </Link >

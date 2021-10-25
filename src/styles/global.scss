@@ -5,15 +5,17 @@
 }
 
 :root {
-  --background: #fff; 
+  --background: #fff;
+  --background-400: #f8f9fc;
   --text-color: #858796;
+  --title-color: #5a5c69;
 }
 
 body,
 input,
 button,
 textarea {
-    font: 400 16px "Roboto", sans-serif;
+  font: 400 1rem "Roboto", sans-serif;
 }
 
 a {
@@ -21,7 +23,7 @@ a {
 }
 
 body {
-  background: var(--background);
+  background: var(--background-400);
 }
 
 ul {
@@ -39,8 +41,8 @@ button {
     flex: 1;
   }
 
-  @media(max-width:472px) {
-    .sidebar-container{
+  @media (max-width: 589px) {
+    .sidebar-container {
       display: none;
     }
   }

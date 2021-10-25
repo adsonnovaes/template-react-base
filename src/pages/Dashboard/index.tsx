@@ -13,7 +13,7 @@ export function Dashboard() {
 
   return (
     <div className="wrapper">
-      <Sidebar />
+      <Sidebar dashboardIsActive/>
       <main>
         <Header/>
       </main>
