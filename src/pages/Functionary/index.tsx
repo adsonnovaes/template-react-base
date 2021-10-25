@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import {
   AiOutlineEdit,
   AiOutlineDelete
@@ -13,16 +12,17 @@ import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
 
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
-export function Company() {
+export function Functionary() {
 
   useEffect(() => {
-    document.title = "Web | Empresa";
+    document.title = "Web | Funcionário";
   }, [])
 
   return (
     <div className="wrapper">
-      <Sidebar companyIsActive />
+      <Sidebar functionaryIsActive />
       <main>
         <Header />
         <div className="container-body">
@@ -30,10 +30,10 @@ export function Company() {
           <div className="header">
 
             <div className="separator" >
-              <h1>Empresas</h1>
+              <h1>Funcionários</h1>
               <div className="search">
                 <Input
-                  placeholder="Buscar por Nome/CNPJ"
+                  placeholder="Buscar por Nome/CPF"
                 />
                 <Button>
                   Buscar
@@ -41,25 +41,27 @@ export function Company() {
               </div>
             </div>
 
-            <Button id="button-create">Nova Empresa</Button>
+            <Button id="button-create">Novo Funcionário</Button>
           </div>
 
           <Table>
             <thead>
               <tr>
+                <th>Empresa</th>
                 <th>Nome</th>
-                <th>CNPJ</th>
-                <th>Funcionarios</th>
-                <th>Gastos total com Funcionários</th>
+                <th>CPF</th>
+                <th>Cargo</th>
+                <th>Salário</th>
                 <th>Ações</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>X</td>
-                <td>R$: x.xxx,xx</td>
+                <td>Empresa 1</td>
+                <td>Héldon</td>
+                <td>1234</td>
+                <td>Programador</td>
+                <td>R$: 1.000,00</td>
                 <td className="text-center">
                   <Link to="/" id="edit">
                     <AiOutlineEdit
@@ -75,10 +77,11 @@ export function Company() {
                 </td>
               </tr>
               <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>X</td>
-                <td>R$: x.xxx,xx</td>
+                <td>Empresa 2</td>
+                <td>Carlos</td>
+                <td>4561</td>
+                <td>Analista</td>
+                <td>R$: 2.000,00</td>
                 <td className="text-center">
                   <Link to="/" id="edit">
                     <AiOutlineEdit

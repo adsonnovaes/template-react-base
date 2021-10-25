@@ -1,11 +1,35 @@
 .middle {
-  // background: red;
+  background: rgb(255, 255, 255);
 
   padding: 1.25rem;
+  margin-top: 1rem;
+
+  border-radius: 0.5rem;
+
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%);
 
   .container-table {
     width: 100%;
     overflow-x: auto;
+
+    a {
+      width: 36px;
+      height: 36px;
+      color: #fff;
+      border-radius: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &#edit {
+        background: #f6c23e;
+      }
+
+      &#delete {
+        background: #e74a3b;
+      }
+    }
 
     table {
       width: 100%;
@@ -21,17 +45,24 @@
         background: var(--blue);
         color: var(--background);
 
-        text-transform: uppercase;
-        font: 500 0.75rem Roboto, sans-serif;
+        // text-transform: uppercase;
+        font: 500 1rem Roboto, sans-serif;
         text-align: left;
 
         font-weight: bold;
       }
 
       td {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
         display: table-cell;
         color: var(--text-color);
+      }
+
+      .text-center {
+        display: flex;
+        justify-content: center;
+
+        gap: 1rem;
       }
     }
   }
