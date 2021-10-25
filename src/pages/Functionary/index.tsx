@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   AiOutlineEdit,
   AiOutlineDelete
@@ -12,7 +13,8 @@ import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
 
 import './styles.scss';
-import { Link } from 'react-router-dom';
+
+import db from '../../data/employees.json';
 
 export function Functionary() {
 
@@ -56,46 +58,30 @@ export function Functionary() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Empresa 1</td>
-                <td>Héldon</td>
-                <td>1234</td>
-                <td>Programador</td>
-                <td>R$: 1.000,00</td>
-                <td className="text-center">
-                  <Link to="/" id="edit">
-                    <AiOutlineEdit
-                      size={20}
-                    />
-                  </Link>
+              {db.map(functionary => {
+                return (
+                  <tr key={functionary.id}>
+                    <td>{functionary.empresa}</td>
+                    <td>{functionary.nome}</td>
+                    <td>{functionary.cpf}</td>
+                    <td>{functionary.cargo}</td>
+                    <td>{functionary.salario}</td>
+                    <td className="text-center">
+                      <Link to="/" id="edit">
+                        <AiOutlineEdit
+                          size={20}
+                        />
+                      </Link>
 
-                  <Link to="/" id="delete">
-                    <AiOutlineDelete
-                      size={20}
-                    />
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <td>Empresa 2</td>
-                <td>Carlos</td>
-                <td>4561</td>
-                <td>Analista</td>
-                <td>R$: 2.000,00</td>
-                <td className="text-center">
-                  <Link to="/" id="edit">
-                    <AiOutlineEdit
-                      size={20}
-                    />
-                  </Link>
-
-                  <Link to="/" id="delete">
-                    <AiOutlineDelete
-                      size={20}
-                    />
-                  </Link>
-                </td>
-              </tr>
+                      <Link to="/" id="delete">
+                        <AiOutlineDelete
+                          size={20}
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+                )
+              })}
             </tbody>
           </Table>
 

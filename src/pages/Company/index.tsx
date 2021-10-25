@@ -12,9 +12,21 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
 
+import db from '../../data/companies.json';
+
 import './styles.scss';
 
+// type CompanyProps = {
+//   id: number;
+//   nome: string;
+//   cnpj: string;
+//   funcionarios: string;
+//   gastos_totalF: string;
+// }
+
 export function Company() {
+
+  // const [companies, setCompanies] = useState<CompanyProps[]>(db);
 
   useEffect(() => {
     document.title = "Web | Empresa";
@@ -55,44 +67,29 @@ export function Company() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>X</td>
-                <td>R$: x.xxx,xx</td>
-                <td className="text-center">
-                  <Link to="/" id="edit">
-                    <AiOutlineEdit
-                      size={20}
-                    />
-                  </Link>
+              {db.map(company => {
+                return (
+                  <tr key={company.id}>
+                    <td>{company.nome}</td>
+                    <td>{company.cnpj}</td>
+                    <td>{company.funcionarios}</td>
+                    <td>{company.gastos_totalF}</td>
+                    <td className="text-center">
+                      <Link to="/" id="edit">
+                        <AiOutlineEdit
+                          size={20}
+                        />
+                      </Link>
 
-                  <Link to="/" id="delete">
-                    <AiOutlineDelete
-                      size={20}
-                    />
-                  </Link>
-                </td>
-              </tr>
-              <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>X</td>
-                <td>R$: x.xxx,xx</td>
-                <td className="text-center">
-                  <Link to="/" id="edit">
-                    <AiOutlineEdit
-                      size={20}
-                    />
-                  </Link>
-
-                  <Link to="/" id="delete">
-                    <AiOutlineDelete
-                      size={20}
-                    />
-                  </Link>
-                </td>
-              </tr>
+                      <Link to="/" id="delete">
+                        <AiOutlineDelete
+                          size={20}
+                        />
+                      </Link>
+                    </td>
+                  </tr>
+                )
+              })}
             </tbody>
           </Table>
 
