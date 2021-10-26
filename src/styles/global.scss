@@ -36,11 +36,16 @@ button {
   cursor: pointer;
 }
 
+body {
+  overflow-y: hidden;
+}
+
 .wrapper {
   display: flex;
 
   main {
     flex: 1;
+    overflow-y: scroll;
   }
 
   @media (max-width: 589px) {
@@ -49,3 +54,8 @@ button {
     }
   }
 }
+
+// .sidebar-container {
+//   position: fixed
+
+// }

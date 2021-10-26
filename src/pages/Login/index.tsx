@@ -67,7 +67,7 @@ export function Login() {
                   onChange={formik.handleChange}
                   // value={email}
                   value={formik.values.email}
-                  hasError={formik.errors.password != null}
+                  hasError={formik.errors.email != null}
                 />
                 <span>{formik.errors.email ? formik.errors.email : null}</span>
               </div>
@@ -80,6 +80,7 @@ export function Login() {
                   onChange={formik.handleChange}
                   // value={password}
                   value={formik.values.password}
+                  hasError={formik.errors.password != null}
                 />
                 <span>{formik.errors.password ? formik.errors.password : null}</span>
               </div>

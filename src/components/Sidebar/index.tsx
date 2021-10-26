@@ -14,7 +14,7 @@ type SideBarProps = {
 
 // Trocar as tags "a" por Link
 export function Sidebar({
-  dashboardIsActive, 
+  dashboardIsActive,
   companyIsActive,
   functionaryIsActive
 }: SideBarProps) {
@@ -23,13 +23,13 @@ export function Sidebar({
       <Link className="home-link active" to="/dashboard">
         <div>Web</div>
       </Link>
-      
+
       <hr />
 
       <li>
-        <Link 
+        <Link
           to="/dashboard"
-          className= {dashboardIsActive ? 'active' : ""}
+          className={dashboardIsActive ? 'active' : ""}
         >
           <MdDashboard />
           <span>Dashboard</span>
@@ -39,7 +39,7 @@ export function Sidebar({
       <hr />
 
       <li className="margin-top">
-        <Link  
+        <Link
           to="/dashboard/company"
           className={companyIsActive ? 'active' : ""}
         >
@@ -49,9 +49,9 @@ export function Sidebar({
       </li>
 
       <li>
-        <Link  
+        <Link
           to="/dashboard/functionary"
-          className= {functionaryIsActive ? 'active' : ""}
+          className={functionaryIsActive ? 'active' : ""}
         >
           <IoPeopleOutline />
           <span>Funcionário</span>
