@@ -6,8 +6,7 @@
   background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 41%, rgba(0, 141, 238, 1) 100%);
 
   overflow: hidden;
-  
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +16,14 @@
     width: 40%;
     height: 60%;
 
-    @media(max-width: 768px) {
+    @media (max-width: 768px) {
       width: 80%;
     }
 
-    @media(max-height: 530px){
+    @media (max-height: 530px) {
       height: 80%;
 
-      @media(max-height: 370px) {
+      @media (max-height: 370px) {
         height: 360px;
       }
     }
@@ -40,12 +39,13 @@
 
     #content-center {
       // background: black;
-      height: 100vh; 
+      height: 100vh;
+      width: 80%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: center; 
-  
+      align-items: center;
+
       > span {
         margin-top: 3rem;
       }
@@ -56,18 +56,19 @@
       //   }
       // }
       // #fields {
-  
+
       // }
     }
 
     span {
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-size: 1.5rem;
       font-weight: bold;
     }
 
     form {
-      width: 76%;
+      // background: yellow;
+      width: 100%;
       height: 30%;
       display: flex;
       flex-direction: column;
@@ -75,14 +76,22 @@
       align-items: center;
 
       #fields {
+        width: 100%;
         margin-top: 3rem;
 
-        input + input {
-          margin-top: 16px
+        div + div {
+          margin-top: 8px;
+        }
+
+        span {
+          padding-left: 0.5rem;
+          font-size: 0.5rem;
+          color: var(--red);
         }
       }
 
-      input, button {
+      input,
+      button {
         width: 100%;
       }
 
@@ -100,7 +109,6 @@
           height: 1px;
         }
       }
-
     }
   }
 }

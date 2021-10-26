@@ -27,7 +27,7 @@
       }
 
       &#delete {
-        background: #e74a3b;
+        background: var(--red);
       }
     }
 
@@ -66,4 +66,8 @@
       }
     }
   }
+}
+
+.gap-footer {
+  height: 2rem;
 }

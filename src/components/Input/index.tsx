@@ -2,13 +2,17 @@ import { InputHTMLAttributes } from 'react';
 
 import './styles.scss';
 
-type ButtonProps = InputHTMLAttributes<HTMLInputElement>;
+type ButtonProps = InputHTMLAttributes<HTMLInputElement> & {
+  hasError?: boolean;
+};
 
-export function Input({...props}: ButtonProps) {
+export function Input({
+  hasError = false, ...props
+}: ButtonProps) {
   return (
-    <input 
-      className="input" 
-      {...props} 
+    <input
+      className={`input ${hasError ? 'error' : ''}`}
+      {...props}
     />
   );
 }

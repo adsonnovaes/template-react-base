@@ -20,4 +20,8 @@
     border: 1px solid #7986e9;
   }
 
+  &.error {
+    border: 1px solid var(--red);
+  }
+
 }

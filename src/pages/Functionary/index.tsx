@@ -43,7 +43,11 @@ export function Functionary() {
               </div>
             </div>
 
-            <Button id="button-create">Novo Funcionário</Button>
+            <div className="buttons-container">
+              <Button id="button-create">Novo Funcionário</Button>
+
+              <Button id="button-create">Importar</Button>
+            </div>
           </div>
 
           <Table>

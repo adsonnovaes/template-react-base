@@ -9,14 +9,18 @@ export function Table({
   children
 }: TableProps) {
   return (
-    <div className="middle">
+    <>
+      <div className="middle">
 
-      <div className="container-table">
-        <table>
-          {children}
-        </table>
+        <div className="container-table">
+          <table>
+            {children}
+          </table>
+        </div>
+
       </div>
 
-    </div>
+      <div className="gap-footer"></div>
+    </>
   );
 }

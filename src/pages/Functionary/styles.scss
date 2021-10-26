@@ -35,6 +35,10 @@
       #button-create {
         width: 100%;
       }
+
+      .buttons-container {
+        width: 100%;
+      }
     }
 
     h1 {
@@ -68,6 +72,11 @@
         // align-items: center;
         border-radius: 0 0.5rem 0.5rem 0;
       }
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 0.8rem;
     }
   }
 }
