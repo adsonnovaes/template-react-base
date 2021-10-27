@@ -9,6 +9,9 @@ import { Dashboard } from './pages/Dashboard';
 import { Company } from './pages/Company';
 import { Functionary } from './pages/Functionary';
 
+import { NewCompany } from './pages/Create/NewCompany';
+// import { NewFunctionary } from './pages/Create/NewFunctionary';
+
 function Routes () {
   return (
     <BrowserRouter>
@@ -19,7 +22,11 @@ function Routes () {
 
         <Route exact path="/dashboard/company" component={Company} />
 
+        <Route exact path="/dashboard/company/create" component={NewCompany} />
+
         <Route exact path="/dashboard/functionary" component={Functionary} />
+
+        {/* <Route exact path="/dashboard/functionary/create" component={NewFunctionary} /> */}
       </Switch>
     </BrowserRouter>
   );

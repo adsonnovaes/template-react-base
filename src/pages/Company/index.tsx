@@ -53,7 +53,11 @@ export function Company() {
               </div>
             </div>
 
-            <Button id="button-create">Nova Empresa</Button>
+            <Link to="/dashboard/company/create">
+              <Button id="button-create">
+                Nova Empresa
+              </Button>
+            </Link>
           </div>
 
           <Table>

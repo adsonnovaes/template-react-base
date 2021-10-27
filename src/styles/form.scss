@@ -1,0 +1,46 @@
+.container-create {
+  width: 90%;
+
+  margin: 0 auto;
+
+  h1 {
+    color: var(--title-color);
+    font-size: 1.75rem;
+    font-weight: 400;
+  }
+
+  .container-form {
+    background: rgb(255, 255, 255);
+
+    padding: 1.25rem;
+    margin-top: 1rem;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(58 59 69 / 15%);
+
+    .form-group {
+      width: 100%;
+      // overflow-x: auto;
+
+      form {
+        .input {
+          width: 100%;
+          margin-top: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        .button {
+          width: 5rem;
+          border-radius: 0.5rem;
+        }
+
+        label {
+          font-size: 1rem;
+          font-weight: 400;
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+}

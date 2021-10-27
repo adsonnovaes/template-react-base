@@ -1,0 +1,11 @@
+form {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  column-gap: 1rem;
+
+  span {
+    padding-left: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--red);
+  }
+}
