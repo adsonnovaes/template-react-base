@@ -43,6 +43,7 @@ export function CreateCompany() {
       <main>
         <Header />
         <CompanyForm
+          title="Nova Empresa"
           handlerCompanyOperation={handlerCreateCompany}
         />
       </main>

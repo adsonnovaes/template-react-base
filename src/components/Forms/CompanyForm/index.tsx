@@ -9,11 +9,23 @@ type CompanyProps = {
   cnpj: string;
 }
 
+type Company = {
+  id: number;
+  nome: string;
+  cnpj: string;
+  funcionarios: string;
+  gastos_totalF: string;
+}
+
 type CompanyFormProps = {
+  company?: Company;
+  title: string;
   handlerCompanyOperation: (data:CompanyProps) => void;
 }
 
 export function CompanyForm({
+  company,
+  title,
   handlerCompanyOperation
 }:CompanyFormProps) {
 
@@ -25,8 +37,8 @@ export function CompanyForm({
 
   const formik = useFormik({
     initialValues: {
-      nome: "",
-      cnpj: ""
+      nome: company != null ? company.nome : "",
+      cnpj: company != null ? company.cnpj : ""
     },
     validationSchema,
     onSubmit: (data) => {
@@ -36,7 +48,7 @@ export function CompanyForm({
 
   return (
     <FormContainer
-      title="Nova Empresa"
+      title={title}
       handleSubmit={formik.handleSubmit}
     >
       <div>
