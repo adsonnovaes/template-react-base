@@ -79,7 +79,12 @@ export function Company() {
                     <td>{company.funcionarios}</td>
                     <td>{company.gastos_totalF}</td>
                     <td className="text-center">
-                      <Link to="/" id="edit">
+                      <Link to={{
+                        pathname: "/dashboard/company/edit",
+                        state: {
+                          company
+                        }
+                      }} id="edit">
                         <AiOutlineEdit
                           size={20}
                         />

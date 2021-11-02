@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import { Button } from '../Button';
+import { Button } from '../../Button';
 
-import '../../styles/form.scss';
+import '../../../styles/form.scss';
 
 type FormProps = {
   title: string;
@@ -9,7 +9,7 @@ type FormProps = {
   children: ReactNode;
 }
 
-export function Form({
+export function FormContainer({
   title,
   handleSubmit,
   children
