@@ -1,16 +1,16 @@
-import { InputHTMLAttributes } from 'react';
+import { SelectHTMLAttributes } from 'react';
 
 import './styles.scss';
 
-type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   hasError?: boolean;
 };
 
-export function Input({
+export function Select({
   hasError = false, ...props
-}: InputProps) {
+}: SelectProps) {
   return (
-    <input
+    <select
       className={`input ${hasError ? 'error' : ''}`}
       {...props}
     />

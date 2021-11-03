@@ -1,0 +1,33 @@
+.functionary-form {
+  // display: flex;
+
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+
+    div {
+      width: 48%;
+    }
+  }
+
+  span {
+    padding-left: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--red);
+  }
+
+  @media (max-width: 589px) { 
+    .input-group {
+      display: block;
+
+      div {
+        width: 100%;
+      }
+
+      div + div {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

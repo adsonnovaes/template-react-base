@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineEdit,
@@ -15,12 +15,40 @@ import { Table } from '../../components/Table';
 import './styles.scss';
 
 import db from '../../data/employees.json';
+import { Modal } from '../../components/Modal';
 
 export function Functionary() {
 
+  const [isVisibleModal, setIsVisibleModal] = useState(false);
+  const [idFunctionary, setIdFunctionary] = useState<number | undefined>();
+
   useEffect(() => {
     document.title = "Web | Funcionário";
-  }, [])
+  }, []);
+
+  function handleDeleteFunctionary(id: number | undefined) {
+    setIsVisibleModal(false);
+
+    if (id === undefined) {
+      return;
+    }
+
+    if (id) {
+      var index = db.findIndex(functionary => {
+        return functionary.id === id;
+      })
+
+      db.splice(index, 1);
+
+      // alert(`Funcionáio ${Deleted}`)
+    }
+  }
+
+  useEffect(() => {
+    if (!!idFunctionary) {
+      setIsVisibleModal(true);
+    }
+  }, [idFunctionary]);
 
   return (
     <div className="wrapper">
@@ -44,7 +72,11 @@ export function Functionary() {
             </div>
 
             <div className="buttons-container">
-              <Button id="button-create">Novo Funcionário</Button>
+              <Link to="/dashboard/functionary/create">
+                <Button id="button-create">
+                  Novo Funcionário
+                </Button>
+              </Link>
 
               <Button id="button-create">Importar</Button>
             </div>
@@ -77,11 +109,14 @@ export function Functionary() {
                         />
                       </Link>
 
-                      <Link to="/" id="delete">
+                      <button
+                        id="delete"
+                        onClick={() => setIdFunctionary(functionary.id)}
+                      >
                         <AiOutlineDelete
                           size={20}
                         />
-                      </Link>
+                      </button>
                     </td>
                   </tr>
                 )
@@ -90,6 +125,17 @@ export function Functionary() {
           </Table>
 
         </div>
+
+        <Modal
+          isOpen={isVisibleModal}
+          setVisibility={() => {
+            setIsVisibleModal(false)
+            setIdFunctionary(undefined);
+          }}
+          handleConfirmed={() => handleDeleteFunctionary(idFunctionary)}
+        >
+          Tem certeza que você deseja excluir este Funcionário?
+        </Modal>
       </main>
     </div>
   );

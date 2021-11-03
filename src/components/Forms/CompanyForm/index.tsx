@@ -49,6 +49,7 @@ export function CompanyForm({
   return (
     <FormContainer
       title={title}
+      isCompanyForm
       handleSubmit={formik.handleSubmit}
     >
       <div>

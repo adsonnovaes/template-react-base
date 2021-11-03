@@ -9,9 +9,11 @@ import { Dashboard } from './pages/Dashboard';
 import { Company } from './pages/Company';
 import { Functionary } from './pages/Functionary';
 
+// Create
 import { CreateCompany } from './pages/Company/Create';
-// import { NewFunctionary } from './pages/Create/NewFunctionary';
+import { CreateFunctionary } from './pages/Functionary/Create';
 
+//Edits
 import { EditCompany } from './pages/Company/Edit';
 
 function Routes () {
@@ -29,6 +31,7 @@ function Routes () {
         <Route exact path="/dashboard/company/edit" component={EditCompany} />
 
         <Route exact path="/dashboard/functionary" component={Functionary} />
+        <Route exact path="/dashboard/functionary/create" component={CreateFunctionary} />
 
         {/* <Route exact path="/dashboard/functionary/create" component={NewFunctionary} /> */}
       </Switch>

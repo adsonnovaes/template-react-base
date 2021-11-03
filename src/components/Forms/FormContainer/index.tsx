@@ -5,12 +5,16 @@ import '../../../styles/form.scss';
 
 type FormProps = {
   title: string;
+  isFunctionaryForm?: boolean;
+  isCompanyForm?: boolean;
   handleSubmit: () => void;
   children: ReactNode;
 }
 
 export function FormContainer({
   title,
+  isFunctionaryForm,
+  isCompanyForm,
   handleSubmit,
   children
 }: FormProps) {
@@ -21,7 +25,12 @@ export function FormContainer({
       
       <div className="container-form">
         <div className="form-group">
-          <form onSubmit={handleSubmit}>
+          <form 
+            className={
+              `${isFunctionaryForm ? 'functionary-form' : ''} ${isCompanyForm ? 'company-form' : ''}`
+            }
+            onSubmit={handleSubmit}
+          >
             {children}
             <Button type="submit">
               Salvar

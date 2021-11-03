@@ -18,7 +18,7 @@ export function CreateCompany() {
   const history = useHistory();
 
   useEffect(() => {
-    document.title = "Web | Novo Funcionário";
+    document.title = "Web | Novo Empresa";
   }, []);
 
   function handlerCreateCompany(data: CompanyProps) {
