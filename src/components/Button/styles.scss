@@ -7,7 +7,7 @@
   padding: 12px 16px;
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 
   border-radius: 1rem;
   cursor: pointer;
@@ -16,10 +16,32 @@
 
   margin-top: 12px;
 
-  transition: background 0.5s;
+  transition: background, filter 0.5s;
 
-  &:hover {
+  &.outlined {
+    background: #fff;
+    // border: 1px solid rgb(147, 188, 236);
+    color: #040d25;
+    &:hover {
+      filter: brightness(0.86);
+    }
+  }
+
+  &.confirmed {
+    background: #e73f5d;
+    // border-radius: ;
+    color: #fff;
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+
+  &:not(.outlined, .confirmed):hover {
     // filter: brightness(0.8);
     background: #3e5fc2;
   }
+
+  // &:hover{
+  //   filter: brightness(0.9);
+  // }
 }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   AiOutlineEdit,
@@ -11,26 +11,54 @@ import { Sidebar } from '../../components/Sidebar';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
+import { Modal } from '../../components/Modal';
 
 import db from '../../data/companies.json';
 
 import './styles.scss';
 
-// type CompanyProps = {
-//   id: number;
-//   nome: string;
-//   cnpj: string;
-//   funcionarios: string;
-//   gastos_totalF: string;
-// }
+type CompanyProps = {
+  id: number;
+  nome: string;
+  cnpj: string;
+  funcionarios: string;
+  gastos_totalF: string;
+}
 
 export function Company() {
 
   // const [companies, setCompanies] = useState<CompanyProps[]>(db);
+  const [isVisibleModal, setIsVisibleModal] = useState(false);
+  const [idCompany, setIdCompany] = useState<number | undefined>();
 
   useEffect(() => {
     document.title = "Web | Empresa";
-  }, [])
+  }, []);
+
+  function handleDeleteCompany(id: number|undefined) {
+    setIsVisibleModal(false);
+
+    if(id === undefined) {
+      return;
+    }
+
+    if(id) {
+      var index = db.findIndex(company => {
+        return company.id === id;
+      })
+
+      const companyDeleted =  db.splice(index, 1);
+
+      // alert(`Empresa ${companyDeleted.}`)
+    }
+  }
+
+  useEffect(() => {
+    if(!!idCompany){
+      console.log(idCompany)
+      setIsVisibleModal(true);
+    }
+  },[idCompany]);
 
   return (
     <div className="wrapper">
@@ -90,11 +118,14 @@ export function Company() {
                         />
                       </Link>
 
-                      <Link to="/" id="delete">
+                      <button 
+                        id="delete"
+                        onClick={() => setIdCompany(company.id)}
+                      >
                         <AiOutlineDelete
                           size={20}
                         />
-                      </Link>
+                      </button>
                     </td>
                   </tr>
                 )
@@ -103,6 +134,17 @@ export function Company() {
           </Table>
 
         </div>
+
+        <Modal
+          isOpen={isVisibleModal}
+          setVisibility={() => {
+            setIsVisibleModal(false)
+            setIdCompany(undefined);
+          }}
+          handleConfirmed={() => handleDeleteCompany(idCompany)}
+        >
+          Tem certeza que você deseja excluir esta Empresa?
+        </Modal>
       </main>
     </div>
   );

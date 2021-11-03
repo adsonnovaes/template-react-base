@@ -12,7 +12,7 @@
     width: 100%;
     overflow-x: auto;
 
-    a {
+    a, #delete {
       width: 36px;
       height: 36px;
       color: #fff;
@@ -22,12 +22,20 @@
       align-items: center;
       justify-content: center;
 
+      transition: filter 0.2s;
+
       &#edit {
         background: #f6c23e;
       }
 
       &#delete {
+        outline: none;
+        border: none;
         background: var(--red);
+      }
+
+      &:hover {
+        filter: brightness(0.9);
       }
     }
 
