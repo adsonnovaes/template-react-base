@@ -17,13 +17,13 @@ import db from '../../data/companies.json';
 
 import './styles.scss';
 
-type CompanyProps = {
-  id: number;
-  nome: string;
-  cnpj: string;
-  funcionarios: string;
-  gastos_totalF: string;
-}
+// type CompanyProps = {
+//   id: number;
+//   nome: string;
+//   cnpj: string;
+//   funcionarios: string;
+//   gastos_totalF: string;
+// }
 
 export function Company() {
 
@@ -47,7 +47,7 @@ export function Company() {
         return company.id === id;
       })
 
-      const companyDeleted =  db.splice(index, 1);
+      db.splice(index, 1);
 
       // alert(`Empresa ${companyDeleted.}`)
     }
@@ -55,7 +55,6 @@ export function Company() {
 
   useEffect(() => {
     if(!!idCompany){
-      console.log(idCompany)
       setIsVisibleModal(true);
     }
   },[idCompany]);
