@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "position": "Operator",
+    "salary": 1871
+  },
+  {
+    "id": 2,
+    "position": "Computer Systems Analyst II",
+    "salary": 2940
+  },
+  {
+    "id": 3,
+    "position": "Administrative Assistant IV",
+    "salary": 2328
+  },
+  {
+    "id": 4,
+    "position": "Office Assistant I",
+    "salary": 2885
+  },
+  {
+    "id": 5,
+    "position": "Food Chemist",
+    "salary": 1304
+  },
+  {
+    "id": 6,
+    "position": "Quality Control Specialist",
+    "salary": 1633
+  },
+  {
+    "id": 7,
+    "position": "VP Accounting",
+    "salary": 1907
+  },
+  {
+    "id": 8,
+    "position": "Programmer I",
+    "salary": 3701
+  },
+  {
+    "id": 9,
+    "position": "Dental Hygienist",
+    "salary": 1811
+  },
+  {
+    "id": 10,
+    "position": "Junior Executive",
+    "salary": 3186
+  },
+  {
+    "id": 11,
+    "position": "Analyst Programmer",
+    "salary": 1716
+  },
+  {
+    "id": 12,
+    "position": "Editor",
+    "salary": 3338
+  },
+  {
+    "id": 13,
+    "position": "Compensation Analyst",
+    "salary": 1457
+  },
+  {
+    "id": 14,
+    "position": "Director of Sales",
+    "salary": 2451
+  },
+  {
+    "id": 15,
+    "position": "Help Desk Operator",
+    "salary": 1714
+  }
+]

@@ -5,6 +5,9 @@ import { FormContainer } from "../FormContainer";
 import { Input } from '../../Input';
 import { Select } from '../../Select';
 
+import db_company from '../../../data/companies.json';
+import db_functionary from '../../../data/employees.json';
+import db_office from '../../../data/office.json';
 
 type FunctionaryProps = {
   empresa: string,
@@ -35,10 +38,10 @@ export function FunctionaryForm({
 }: FunctionaryFormProps) {
 
   const validationSchema = Yup.object().shape({
+    empresa: Yup.string().required('*Selecione uma Empresa'),
     nome: Yup.string().required('*O nome é obrigatório'),
-    // cpf: Yup.string().required('*O CNPJ é obrigatório'),
-    // cpf: Yup.,
-    // cargo:
+    cpf: Yup.string().min(14, '*Cpf está incompleto').required('*O Cpf é obrigatório'),
+    cargo: Yup.string().required('*Selecione o cargo')
   });
 
   const formik = useFormik({
@@ -67,9 +70,11 @@ export function FunctionaryForm({
           defaultValue={'DEFAULT'}
         >
           <option value="DEFAULT" disabled>Selecione</option>
-          <option value="1">Empresa 1</option>
-          <option value="2">Empresa 2</option>
-          <option value="3">Empresa 3</option>
+          {db_company.map((company, index) => {
+            return (
+              <option key={index + company.id} value={company.id}>{company.nome}</option>
+            )
+          })}
         </Select>
       </div>
 
@@ -79,6 +84,7 @@ export function FunctionaryForm({
           <Input
             name="nome"
             type="text"
+            placeholder="Digite o nome"
             onChange={formik.handleChange}
             value={formik.values.nome}
             hasError={formik.errors.nome != null}
@@ -92,6 +98,9 @@ export function FunctionaryForm({
           <Input
             name="cpf"
             type="text"
+            mask="cpf"
+            placeholder="Digite o cpf"
+            maxLength={14}
             onChange={formik.handleChange}
             value={formik.values.cpf}
             hasError={formik.errors.cpf != null}
@@ -107,10 +116,13 @@ export function FunctionaryForm({
           required
           defaultValue={'DEFAULT'}
         >
-          <option defaultValue={'DEFAULT'} disabled>Selecione</option>
-          <option value="1">Empresa 1</option>
-          <option value="2">Empresa 2</option>
-          <option value="3">Empresa 3</option>
+          <option value="DEFAULT" disabled>Selecione</option>
+          {db_office.map((office, index) => {
+            return (
+              <option key={index + office.id} value={office.id}>{office.position}</option>
+            )
+          })}
+          
         </Select>
       </div>
 
