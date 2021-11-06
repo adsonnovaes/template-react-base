@@ -28,13 +28,20 @@ export function EditCompany() {
   const state = useLocation<Object>().state.company;
   const history = useHistory();
 
+  function replaceCnpj(cnpj: string) {
+    let newCnpj = cnpj.replace(".","");
+    newCnpj = newCnpj.replace("/", "");
+
+    return newCnpj;
+  }
+
   function handlerEditCompany(data: Company){
     let index = db.findIndex(company => {
       return company.id === state.id;
     })
 
     db[index].nome = data.nome;
-    db[index].cnpj = data.cnpj;
+    db[index].cnpj = parseInt(replaceCnpj(data.cnpj));
 
     // console.log(db[index]);
     alert("Empresa Atualizada com sucesso!");

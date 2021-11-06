@@ -4,6 +4,8 @@ import { useHistory } from "react-router";
 import { Header } from "../../../components/Header";
 import { Sidebar } from '../../../components/Sidebar';
 import { CompanyForm } from '../../../components/Forms/CompanyForm';
+
+import { replaceCnpj } from '../../../utils/utils';
 import db from '../../../data/companies.json';
 
 import '../company-form.scss';
@@ -25,9 +27,9 @@ export function CreateCompany() {
     const newCompany = {
       id: db.length + 1,
       nome: data.nome,
-      cnpj: data.cnpj,
+      cnpj: parseInt(replaceCnpj(data.cnpj)),
       funcionarios: 0,
-      gastos_totalF: "NaN"
+      gastos_totalF: 0
     }
 
     db.push(newCompany);

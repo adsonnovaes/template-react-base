@@ -70,8 +70,9 @@ export function CompanyForm({
         <Input
           name="cnpj"
           type="text"
-          minLength={14}
-          maxLength={14}
+          mask="cnpj"
+          minLength={18}
+          maxLength={18}
           onChange={formik.handleChange}
           value={formik.values.cnpj}
           hasError={formik.errors.cnpj != null}

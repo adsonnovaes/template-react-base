@@ -5,17 +5,19 @@ import {
   AiOutlineDelete
 } from 'react-icons/ai';
 
+import { replaceMoney } from '../../utils/utils';
+
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
+import { Modal } from '../../components/Modal';
 
 import './styles.scss';
 
 import db from '../../data/employees.json';
-import { Modal } from '../../components/Modal';
 
 export function Functionary() {
 
@@ -101,7 +103,7 @@ export function Functionary() {
                     <td>{functionary.nome}</td>
                     <td>{functionary.cpf}</td>
                     <td>{functionary.cargo}</td>
-                    <td>{functionary.salario}</td>
+                    <td>{replaceMoney(functionary.salario)}</td>
                     <td className="text-center">
                       <Link to="/" id="edit">
                         <AiOutlineEdit

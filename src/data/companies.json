@@ -1,282 +1,282 @@
 [
   {
     "id": 1,
-    "nome": "Freemon Phippen",
-    "cnpj": "Harris Group",
-    "funcionarios": 100,
-    "gastos_totalF": "$4.23B"
+    "nome": "Welch, Hoppe and Kihn",
+    "cnpj": 97371806771759,
+    "funcionarios": 43,
+    "gastos_totalF": 38441
   },
   {
     "id": 2,
-    "nome": "Shermy Antonsen",
-    "cnpj": "Gerlach-Mann",
-    "funcionarios": 39,
-    "gastos_totalF": "n/a"
+    "nome": "Simonis Inc",
+    "cnpj": 30371543055914,
+    "funcionarios": 84,
+    "gastos_totalF": 34415
   },
   {
     "id": 3,
-    "nome": "Ansley Gleadhell",
-    "cnpj": "Hoeger-Lindgren",
-    "funcionarios": 42,
-    "gastos_totalF": "$1.61B"
+    "nome": "Kub, Shields and Weber",
+    "cnpj": 16255076679122,
+    "funcionarios": 71,
+    "gastos_totalF": 44037
   },
   {
     "id": 4,
-    "nome": "Glynn Lapere",
-    "cnpj": "Hagenes-Dickinson",
-    "funcionarios": 31,
-    "gastos_totalF": "$10.63B"
+    "nome": "Gerhold, Kozey and Deckow",
+    "cnpj": 30903068140562,
+    "funcionarios": 22,
+    "gastos_totalF": 43245
   },
   {
     "id": 5,
-    "nome": "Brinn Swepson",
-    "cnpj": "Hermiston, Koss and Pfannerstill",
-    "funcionarios": 100,
-    "gastos_totalF": "$5.28B"
+    "nome": "Dickens-Okuneva",
+    "cnpj": 36650587322147,
+    "funcionarios": 63,
+    "gastos_totalF": 73541
   },
   {
     "id": 6,
-    "nome": "Viki Simonini",
-    "cnpj": "Reinger Inc",
-    "funcionarios": 37,
-    "gastos_totalF": "$166.93B"
+    "nome": "Moore-Thiel",
+    "cnpj": 69956292183530,
+    "funcionarios": 89,
+    "gastos_totalF": 74308
   },
   {
     "id": 7,
-    "nome": "Broderic Kamall",
-    "cnpj": "Hermann-Friesen",
-    "funcionarios": 72,
-    "gastos_totalF": "$2.85B"
+    "nome": "Torp, Rau and Powlowski",
+    "cnpj": 39158386497333,
+    "funcionarios": 83,
+    "gastos_totalF": 64909
   },
   {
     "id": 8,
-    "nome": "Chic Spinage",
-    "cnpj": "Prohaska Inc",
-    "funcionarios": 30,
-    "gastos_totalF": "n/a"
+    "nome": "Parker and Sons",
+    "cnpj": 60505457383583,
+    "funcionarios": 80,
+    "gastos_totalF": 73927
   },
   {
     "id": 9,
-    "nome": "Clayton Orwin",
-    "cnpj": "Mueller, Gerhold and Volkman",
-    "funcionarios": 7,
-    "gastos_totalF": "$3.77B"
+    "nome": "Jakubowski and Sons",
+    "cnpj": 65845706230911,
+    "funcionarios": 50,
+    "gastos_totalF": 47616
   },
   {
     "id": 10,
-    "nome": "Dorian Kopp",
-    "cnpj": "Mante, Kihn and Hilpert",
-    "funcionarios": 71,
-    "gastos_totalF": "$461.95M"
+    "nome": "Armstrong and Sons",
+    "cnpj": 98243503090085,
+    "funcionarios": 39,
+    "gastos_totalF": 56492
   },
   {
     "id": 11,
-    "nome": "Martin Freer",
-    "cnpj": "Bahringer, Torphy and Osinski",
-    "funcionarios": 64,
-    "gastos_totalF": "$52.66M"
+    "nome": "Trantow-Watsica",
+    "cnpj": 94013556514388,
+    "funcionarios": 55,
+    "gastos_totalF": 51593
   },
   {
     "id": 12,
-    "nome": "Fannie Huish",
-    "cnpj": "Donnelly and Sons",
-    "funcionarios": 35,
-    "gastos_totalF": "$318.66M"
+    "nome": "Turner-Champlin",
+    "cnpj": 74849820639307,
+    "funcionarios": 42,
+    "gastos_totalF": 83784
   },
   {
     "id": 13,
-    "nome": "Raimund Gallienne",
-    "cnpj": "Strosin-Mueller",
-    "funcionarios": 84,
-    "gastos_totalF": "$819.54M"
+    "nome": "Volkman, Feest and Mills",
+    "cnpj": 64115029385030,
+    "funcionarios": 43,
+    "gastos_totalF": 67098
   },
   {
     "id": 14,
-    "nome": "Jackelyn Wreakes",
-    "cnpj": "Johnson-Greenholt",
-    "funcionarios": 49,
-    "gastos_totalF": "$311.8M"
+    "nome": "Ritchie, Kuhn and Trantow",
+    "cnpj": 17163251128164,
+    "funcionarios": 38,
+    "gastos_totalF": 29671
   },
   {
     "id": 15,
-    "nome": "Doy Myring",
-    "cnpj": "Waters LLC",
-    "funcionarios": 87,
-    "gastos_totalF": "$137.52M"
+    "nome": "Hickle, Little and Howell",
+    "cnpj": 52890243863150,
+    "funcionarios": 43,
+    "gastos_totalF": 59407
   },
   {
     "id": 16,
-    "nome": "Umberto O'Grada",
-    "cnpj": "Cummings and Sons",
-    "funcionarios": 8,
-    "gastos_totalF": "n/a"
+    "nome": "Bergstrom, Schinner and Rohan",
+    "cnpj": 64582791506359,
+    "funcionarios": 60,
+    "gastos_totalF": 61820
   },
   {
     "id": 17,
-    "nome": "Joete Saddington",
-    "cnpj": "DuBuque Inc",
-    "funcionarios": 100,
-    "gastos_totalF": "n/a"
+    "nome": "Reichert and Sons",
+    "cnpj": 90551291132494,
+    "funcionarios": 95,
+    "gastos_totalF": 43472
   },
   {
     "id": 18,
-    "nome": "Chase Suttill",
-    "cnpj": "Waters-Gerhold",
-    "funcionarios": 52,
-    "gastos_totalF": "n/a"
+    "nome": "Cassin-Bergnaum",
+    "cnpj": 66922726377317,
+    "funcionarios": 21,
+    "gastos_totalF": 27978
   },
   {
     "id": 19,
-    "nome": "Dominica Ivashechkin",
-    "cnpj": "Mills-Moen",
-    "funcionarios": 63,
-    "gastos_totalF": "$934.3M"
+    "nome": "Hirthe LLC",
+    "cnpj": 67756881113486,
+    "funcionarios": 50,
+    "gastos_totalF": 98833
   },
   {
     "id": 20,
-    "nome": "Mabelle Vosper",
-    "cnpj": "Hoppe LLC",
-    "funcionarios": 46,
-    "gastos_totalF": "$89.33M"
+    "nome": "Hermann and Sons",
+    "cnpj": 30966147903328,
+    "funcionarios": 65,
+    "gastos_totalF": 44325
   },
   {
     "id": 21,
-    "nome": "Kelcy Laverick",
-    "cnpj": "Shields, Feest and Leannon",
-    "funcionarios": 58,
-    "gastos_totalF": "$761.63M"
+    "nome": "Crist, D'Amore and Romaguera",
+    "cnpj": 12777230577354,
+    "funcionarios": 20,
+    "gastos_totalF": 37311
   },
   {
     "id": 22,
-    "nome": "Felipa Prestney",
-    "cnpj": "Greenfelder-Beier",
-    "funcionarios": 45,
-    "gastos_totalF": "$1.8B"
+    "nome": "Schulist-Toy",
+    "cnpj": 44764993749327,
+    "funcionarios": 95,
+    "gastos_totalF": 89016
   },
   {
     "id": 23,
-    "nome": "Kain Graham",
-    "cnpj": "Heathcote-Schulist",
-    "funcionarios": 99,
-    "gastos_totalF": "$20.37B"
+    "nome": "Hilll LLC",
+    "cnpj": 35468010729427,
+    "funcionarios": 100,
+    "gastos_totalF": 42921
   },
   {
     "id": 24,
-    "nome": "Thain Owlner",
-    "cnpj": "Block and Sons",
-    "funcionarios": 94,
-    "gastos_totalF": "$1.34B"
+    "nome": "Paucek-Harber",
+    "cnpj": 12002939964493,
+    "funcionarios": 77,
+    "gastos_totalF": 42690
   },
   {
     "id": 25,
-    "nome": "Mick Lowthorpe",
-    "cnpj": "Hartmann and Sons",
-    "funcionarios": 7,
-    "gastos_totalF": "$2.58B"
+    "nome": "Mitchell, Wolf and Koss",
+    "cnpj": 40338507258711,
+    "funcionarios": 72,
+    "gastos_totalF": 21051
   },
   {
     "id": 26,
-    "nome": "Tamarah Izaks",
-    "cnpj": "Daugherty and Sons",
-    "funcionarios": 38,
-    "gastos_totalF": "$923.88M"
+    "nome": "Weimann LLC",
+    "cnpj": 91160652950723,
+    "funcionarios": 96,
+    "gastos_totalF": 77487
   },
   {
     "id": 27,
-    "nome": "Karry Boner",
-    "cnpj": "Huel, Goyette and Ondricka",
-    "funcionarios": 12,
-    "gastos_totalF": "$184.63M"
+    "nome": "Dooley, Yundt and Raynor",
+    "cnpj": 42469165867701,
+    "funcionarios": 58,
+    "gastos_totalF": 35109
   },
   {
     "id": 28,
-    "nome": "Marius Sterland",
-    "cnpj": "Krajcik and Sons",
-    "funcionarios": 49,
-    "gastos_totalF": "$1.84B"
+    "nome": "Hills-Lindgren",
+    "cnpj": 60666483660000,
+    "funcionarios": 35,
+    "gastos_totalF": 89647
   },
   {
     "id": 29,
-    "nome": "Marta Davidson",
-    "cnpj": "Rice-Strosin",
-    "funcionarios": 91,
-    "gastos_totalF": "n/a"
+    "nome": "McDermott-Predovic",
+    "cnpj": 24665502787100,
+    "funcionarios": 76,
+    "gastos_totalF": 96375
   },
   {
     "id": 30,
-    "nome": "Felisha Priestman",
-    "cnpj": "Keeling Inc",
-    "funcionarios": 74,
-    "gastos_totalF": "$146.32M"
+    "nome": "Larkin-Batz",
+    "cnpj": 30694108747810,
+    "funcionarios": 46,
+    "gastos_totalF": 42610
   },
   {
     "id": 31,
-    "nome": "Temple Flannigan",
-    "cnpj": "Koss, Hoppe and Daniel",
-    "funcionarios": 11,
-    "gastos_totalF": "$1.54B"
+    "nome": "Greenholt, Cassin and Welch",
+    "cnpj": 36038285755253,
+    "funcionarios": 99,
+    "gastos_totalF": 35158
   },
   {
     "id": 32,
-    "nome": "Sandra Keighley",
-    "cnpj": "Mueller Group",
-    "funcionarios": 96,
-    "gastos_totalF": "$16.61M"
+    "nome": "Grant LLC",
+    "cnpj": 11944595072131,
+    "funcionarios": 22,
+    "gastos_totalF": 40346
   },
   {
     "id": 33,
-    "nome": "Cristobal Dyche",
-    "cnpj": "Cronin-Swift",
-    "funcionarios": 3,
-    "gastos_totalF": "$669.59M"
+    "nome": "Douglas and Sons",
+    "cnpj": 46214186211175,
+    "funcionarios": 82,
+    "gastos_totalF": 63822
   },
   {
     "id": 34,
-    "nome": "Pablo Andreia",
-    "cnpj": "Cartwright Inc",
-    "funcionarios": 51,
-    "gastos_totalF": "$13.32B"
+    "nome": "O'Hara-Brekke",
+    "cnpj": 90894659573902,
+    "funcionarios": 65,
+    "gastos_totalF": 93125
   },
   {
     "id": 35,
-    "nome": "Noel Waterfall",
-    "cnpj": "Ullrich LLC",
-    "funcionarios": 31,
-    "gastos_totalF": "$60.36M"
+    "nome": "Howell Inc",
+    "cnpj": 80522763542664,
+    "funcionarios": 70,
+    "gastos_totalF": 49903
   },
   {
     "id": 36,
-    "nome": "Valerye Ziemecki",
-    "cnpj": "Schroeder LLC",
-    "funcionarios": 100,
-    "gastos_totalF": "$3.17B"
+    "nome": "Trantow-Kuhic",
+    "cnpj": 44005742974835,
+    "funcionarios": 80,
+    "gastos_totalF": 38002
   },
   {
     "id": 37,
-    "nome": "Benito Emney",
-    "cnpj": "Dietrich-Schiller",
-    "funcionarios": 56,
-    "gastos_totalF": "$28.16B"
+    "nome": "McLaughlin Inc",
+    "cnpj": 40278950401523,
+    "funcionarios": 62,
+    "gastos_totalF": 42720
   },
   {
     "id": 38,
-    "nome": "Forest McCaskill",
-    "cnpj": "Schamberger, Morissette and Mohr",
-    "funcionarios": 6,
-    "gastos_totalF": "$446.33M"
+    "nome": "Brown-Nitzsche",
+    "cnpj": 25493935481699,
+    "funcionarios": 82,
+    "gastos_totalF": 42494
   },
   {
     "id": 39,
-    "nome": "Dalton Pascow",
-    "cnpj": "Connelly, Upton and Wintheiser",
-    "funcionarios": 66,
-    "gastos_totalF": "$236.5M"
+    "nome": "Murazik, Barton and Deckow",
+    "cnpj": 53242657023686,
+    "funcionarios": 71,
+    "gastos_totalF": 80097
   },
   {
     "id": 40,
-    "nome": "Corine Flint",
-    "cnpj": "Sauer Group",
-    "funcionarios": 70,
-    "gastos_totalF": "$1.31B"
+    "nome": "Pfannerstill-Sanford",
+    "cnpj": 41540928386352,
+    "funcionarios": 63,
+    "gastos_totalF": 30461
   }
 ]

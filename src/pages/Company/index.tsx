@@ -5,6 +5,8 @@ import {
   AiOutlineDelete
 } from 'react-icons/ai';
 
+import { FormatCnpj, replaceMoney } from '../../utils/utils';
+
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
 
@@ -16,14 +18,6 @@ import { Modal } from '../../components/Modal';
 import db from '../../data/companies.json';
 
 import './styles.scss';
-
-// type CompanyProps = {
-//   id: number;
-//   nome: string;
-//   cnpj: string;
-//   funcionarios: string;
-//   gastos_totalF: string;
-// }
 
 export function Company() {
 
@@ -102,9 +96,9 @@ export function Company() {
                 return (
                   <tr key={company.id}>
                     <td>{company.nome}</td>
-                    <td>{company.cnpj}</td>
+                    <td>{FormatCnpj(company.cnpj)}</td>
                     <td>{company.funcionarios}</td>
-                    <td>{company.gastos_totalF}</td>
+                    <td>{replaceMoney(company.gastos_totalF)}</td>
                     <td className="text-center">
                       <Link to={{
                         pathname: "/dashboard/company/edit",

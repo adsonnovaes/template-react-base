@@ -12,7 +12,7 @@ import db_office from '../../../data/office.json';
 type FunctionaryProps = {
   empresa: string,
   nome: string,
-  cpf: number,
+  cpf: string,
   cargo: string,
 }
 
@@ -20,7 +20,7 @@ type Functionary = {
   id: number,
   empresa: string,
   nome: string,
-  cpf: number,
+  cpf: string,
   cargo: string,
   salario: string
 }
@@ -40,16 +40,16 @@ export function FunctionaryForm({
   const validationSchema = Yup.object().shape({
     empresa: Yup.string().required('*Selecione uma Empresa'),
     nome: Yup.string().required('*O nome é obrigatório'),
-    cpf: Yup.string().min(14, '*Cpf está incompleto').required('*O Cpf é obrigatório'),
+    cpf: Yup.string().min(11, '*Cpf está incompleto').required('*O Cpf é obrigatório'),
     cargo: Yup.string().required('*Selecione o cargo')
   });
 
   const formik = useFormik({
     initialValues: {
-      empresa: functionary != null ? functionary.empresa : "",
+      empresa: functionary != null ? functionary.empresa : "DEFAULT",
       nome: functionary != null ? functionary.nome : "",
-      cpf: functionary != null ? functionary.cpf : 0,
-      cargo: functionary != null ? functionary.cargo : "",
+      cpf: functionary != null ? functionary.cpf : "",
+      cargo: functionary != null ? functionary.cargo : "DEFAULT",
     },
     validationSchema,
     onSubmit: (data) => {
@@ -67,7 +67,10 @@ export function FunctionaryForm({
         <label>Selectione uma Empresa</label>
         <Select
           required
-          defaultValue={'DEFAULT'}
+          // defaultValue={'DEFAULT'}
+          onChange={formik.handleChange}
+          name="empresa"
+          value={formik.values.empresa}
         >
           <option value="DEFAULT" disabled>Selecione</option>
           {db_company.map((company, index) => {
@@ -76,6 +79,7 @@ export function FunctionaryForm({
             )
           })}
         </Select>
+        <span>{formik.errors.empresa ? formik.errors.empresa : null}</span>
       </div>
 
       <div className="input-group">
@@ -114,7 +118,10 @@ export function FunctionaryForm({
         <label>Selectione um Cargo</label>
         <Select
           required
-          defaultValue={'DEFAULT'}
+          // defaultValue={'DEFAULT'}
+          onChange={formik.handleChange}
+          name="cargo"
+          value={formik.values.cargo}
         >
           <option value="DEFAULT" disabled>Selecione</option>
           {db_office.map((office, index) => {
@@ -124,6 +131,7 @@ export function FunctionaryForm({
           })}
           
         </Select>
+        <span>{formik.errors.cargo ? formik.errors.cargo : null}</span>
       </div>
 
     </FormContainer>
