@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
-import { FunctionaryForm } from '../../../components/Forms/FunctionaryForm';
+import { useCompany } from '../../../hooks/useCompany';
+
 import { replaceCpf } from '../../../utils/utils';
 
+import { FunctionaryForm } from '../../../components/Forms/FunctionaryForm';
 import { Header } from '../../../components/Header';
 import { Sidebar } from '../../../components/Sidebar';
 
@@ -27,21 +29,8 @@ export function CreateFunctionary() {
     document.title = "Web | Novo Funcionário";
   }, []);
 
-  function handlerCreateFunctionary(data: FunctionaryProps) {
-    const cargo = db_office.find(office => {
-      let idCargo = parseInt(data.cargo);
-      return office.id === idCargo;
-    });
-
-    const company = db_company.find(company => {
-      let idCompany = parseInt(data.empresa);
-      return company.id === idCompany;
-    });
-
-    const index = db_company.findIndex(company => {
-      let idCompany = parseInt(data.empresa);
-      return company.id === idCompany;
-    });
+  function HandlerCreateFunctionary(data: FunctionaryProps) {
+    const { company, index, cargo } = useCompany(data.empresa, data.cargo);
 
     if (cargo !== undefined && company !== undefined) {
 
@@ -52,6 +41,10 @@ export function CreateFunctionary() {
         cpf: replaceCpf(data.cpf),
         cargo: cargo.position,
         salario: cargo.salary,
+        foreign_keys: {
+          id_company: company.id,
+          id_position: cargo.id
+        }
       }
 
       db_functionary.push(newFunctionary);
@@ -71,7 +64,7 @@ export function CreateFunctionary() {
         <Header />
         <FunctionaryForm
           title="Novo Funcionário"
-          handlerFunctionaryOperation={handlerCreateFunctionary}
+          handlerFunctionaryOperation={HandlerCreateFunctionary}
         />
       </main>
     </div>

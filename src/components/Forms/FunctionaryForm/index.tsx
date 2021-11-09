@@ -22,7 +22,7 @@ type Functionary = {
   nome: string,
   cpf: string,
   cargo: string,
-  salario: string
+  salario: number
 }
 
 type FunctionaryFormProps = {
@@ -46,10 +46,12 @@ export function FunctionaryForm({
 
   const formik = useFormik({
     initialValues: {
-      empresa: functionary != null ? functionary.empresa : "DEFAULT",
+      empresa: "DEFAULT",
       nome: functionary != null ? functionary.nome : "",
       cpf: functionary != null ? functionary.cpf : "",
-      cargo: functionary != null ? functionary.cargo : "DEFAULT",
+      // No select ao definir o valor passado pelo parametro o id não vem junto, 
+      // Dificultando assim a busca pelo indice
+      cargo: "DEFAULT",
     },
     validationSchema,
     onSubmit: (data) => {

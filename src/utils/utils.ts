@@ -10,6 +10,13 @@ export function FormatCnpj(currentValue: number) {
   return updateValue;
 }
 
+export function formatCPF(cpf: number) {
+  let value = "" + cpf;
+  value = value.replace(/[^\d]/g, "");
+
+  return value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+}
+
 export function replaceCnpj(cnpj: string) {
   let newCnpj = cnpj.replaceAll(".", "");
   newCnpj = newCnpj.replace("/", "");
@@ -27,7 +34,7 @@ export function replaceCpf(cpf: string) {
 
 export function replaceMoney(money: number) {
   let value = money.toLocaleString('pt-br', {
-    style: 'currency', 
+    style: 'currency',
     currency: 'BRL',
     maximumFractionDigits: 2
   });

@@ -15,6 +15,7 @@ import { CreateFunctionary } from './pages/Functionary/Create';
 
 //Edits
 import { EditCompany } from './pages/Company/Edit';
+import { EditFunctionary } from './pages/Functionary/Edit';
 
 function Routes () {
   return (
@@ -31,7 +32,10 @@ function Routes () {
         <Route exact path="/dashboard/company/edit" component={EditCompany} />
 
         <Route exact path="/dashboard/functionary" component={Functionary} />
+
         <Route exact path="/dashboard/functionary/create" component={CreateFunctionary} />
+        
+        <Route exact path="/dashboard/functionary/edit" component={EditFunctionary} />
 
         {/* <Route exact path="/dashboard/functionary/create" component={NewFunctionary} /> */}
       </Switch>

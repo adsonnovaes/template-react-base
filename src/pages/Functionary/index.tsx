@@ -5,7 +5,7 @@ import {
   AiOutlineDelete
 } from 'react-icons/ai';
 
-import { replaceMoney } from '../../utils/utils';
+import { replaceMoney, formatCPF } from '../../utils/utils';
 
 import { Header } from '../../components/Header';
 import { Sidebar } from '../../components/Sidebar';
@@ -101,11 +101,16 @@ export function Functionary() {
                   <tr key={functionary.id}>
                     <td>{functionary.empresa}</td>
                     <td>{functionary.nome}</td>
-                    <td>{functionary.cpf}</td>
+                    <td>{formatCPF(functionary.cpf)}</td>
                     <td>{functionary.cargo}</td>
                     <td>{replaceMoney(functionary.salario)}</td>
                     <td className="text-center">
-                      <Link to="/" id="edit">
+                      <Link to={{
+                        pathname: "/dashboard/functionary/edit",
+                        state: {
+                          functionary
+                        }
+                      }} id="edit">
                         <AiOutlineEdit
                           size={20}
                         />

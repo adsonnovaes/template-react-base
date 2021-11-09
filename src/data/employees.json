@@ -5,7 +5,11 @@
     "nome": "Remington Yantsev",
     "cpf": 63093975813,
     "cargo": "Engineering",
-    "salario": 5802
+    "salario": 5802,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 2,
@@ -13,7 +17,11 @@
     "nome": "Harwell Eschalette",
     "cpf": 46387028606,
     "cargo": "Research and Development",
-    "salario": 7923
+    "salario": 7923,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 3,
@@ -21,7 +29,11 @@
     "nome": "Davy Bartoshevich",
     "cpf": 86005784470,
     "cargo": "Product Management",
-    "salario": 7682
+    "salario": 7682,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 4,
@@ -29,7 +41,11 @@
     "nome": "Byrom Giorgietto",
     "cpf": 27098647499,
     "cargo": "Research and Development",
-    "salario": 5930
+    "salario": 5930,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 5,
@@ -37,7 +53,11 @@
     "nome": "Pierre Flippini",
     "cpf": 12802422586,
     "cargo": "Support",
-    "salario": 6044
+    "salario": 6044,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 6,
@@ -45,7 +65,11 @@
     "nome": "Deerdre Scuse",
     "cpf": 58136814904,
     "cargo": "Product Management",
-    "salario": 4574
+    "salario": 4574,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 7,
@@ -53,7 +77,11 @@
     "nome": "Guthrie Gurr",
     "cpf": 37477779813,
     "cargo": "Accounting",
-    "salario": 7001
+    "salario": 7001,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 8,
@@ -61,7 +89,11 @@
     "nome": "Morty Guiver",
     "cpf": 84553592319,
     "cargo": "Human Resources",
-    "salario": 3054
+    "salario": 3054,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 9,
@@ -69,7 +101,11 @@
     "nome": "Caro Crawley",
     "cpf": 14008482630,
     "cargo": "Training",
-    "salario": 7184
+    "salario": 7184,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 10,
@@ -77,7 +113,11 @@
     "nome": "Trip Plumstead",
     "cpf": 61166401699,
     "cargo": "Product Management",
-    "salario": 6112
+    "salario": 6112,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 11,
@@ -85,7 +125,11 @@
     "nome": "Alexandrina Ciric",
     "cpf": 23090111918,
     "cargo": "Support",
-    "salario": 4073
+    "salario": 4073,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 12,
@@ -93,7 +137,11 @@
     "nome": "Lida Parmenter",
     "cpf": 27991074726,
     "cargo": "Support",
-    "salario": 8728
+    "salario": 8728,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 13,
@@ -101,7 +149,11 @@
     "nome": "Midge Mourant",
     "cpf": 24652519193,
     "cargo": "Product Management",
-    "salario": 9573
+    "salario": 9573,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 14,
@@ -109,7 +161,11 @@
     "nome": "Llywellyn Draijer",
     "cpf": 54487365297,
     "cargo": "Marketing",
-    "salario": 9293
+    "salario": 9293,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 15,
@@ -117,7 +173,11 @@
     "nome": "Colver Lude",
     "cpf": 80149870359,
     "cargo": "Marketing",
-    "salario": 9566
+    "salario": 9566,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 16,
@@ -125,7 +185,11 @@
     "nome": "Alister Ferrarese",
     "cpf": 80824477498,
     "cargo": "Support",
-    "salario": 6714
+    "salario": 6714,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 17,
@@ -133,7 +197,11 @@
     "nome": "Mannie Alywin",
     "cpf": 33607261985,
     "cargo": "Accounting",
-    "salario": 8520
+    "salario": 8520,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 18,
@@ -141,7 +209,11 @@
     "nome": "Norrie Carletti",
     "cpf": 64137049378,
     "cargo": "Services",
-    "salario": 7822
+    "salario": 7822,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 19,
@@ -149,7 +221,11 @@
     "nome": "Aubrette Blount",
     "cpf": 14593539804,
     "cargo": "Support",
-    "salario": 5576
+    "salario": 5576,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 20,
@@ -157,7 +233,11 @@
     "nome": "Haroun Kain",
     "cpf": 54466164510,
     "cargo": "Services",
-    "salario": 3127
+    "salario": 3127,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 21,
@@ -165,7 +245,11 @@
     "nome": "Brenden Truswell",
     "cpf": 87880803087,
     "cargo": "Training",
-    "salario": 4018
+    "salario": 4018,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 22,
@@ -173,7 +257,11 @@
     "nome": "Massimiliano Kernocke",
     "cpf": 56084657645,
     "cargo": "Product Management",
-    "salario": 4173
+    "salario": 4173,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 23,
@@ -181,7 +269,11 @@
     "nome": "Farand Heinssen",
     "cpf": 69365894843,
     "cargo": "Engineering",
-    "salario": 9116
+    "salario": 9116,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 24,
@@ -189,7 +281,11 @@
     "nome": "Linus Nan Carrow",
     "cpf": 70407431584,
     "cargo": "Research and Development",
-    "salario": 9263
+    "salario": 9263,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 25,
@@ -197,7 +293,11 @@
     "nome": "Delainey O'Drought",
     "cpf": 65175424827,
     "cargo": "Business Development",
-    "salario": 9969
+    "salario": 9969,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 26,
@@ -205,7 +305,11 @@
     "nome": "Drusi Gosz",
     "cpf": 18249377929,
     "cargo": "Support",
-    "salario": 5870
+    "salario": 5870,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 27,
@@ -213,7 +317,11 @@
     "nome": "Elliot Mansford",
     "cpf": 33525648533,
     "cargo": "Marketing",
-    "salario": 9352
+    "salario": 9352,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 28,
@@ -221,7 +329,11 @@
     "nome": "Marylee Spilling",
     "cpf": 95771920498,
     "cargo": "Sales",
-    "salario": 8902
+    "salario": 8902,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 29,
@@ -229,7 +341,11 @@
     "nome": "Horst Aston",
     "cpf": 66128682327,
     "cargo": "Research and Development",
-    "salario": 6377
+    "salario": 6377,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 30,
@@ -237,7 +353,11 @@
     "nome": "Hillard Lisimore",
     "cpf": 32187676303,
     "cargo": "Product Management",
-    "salario": 7856
+    "salario": 7856,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 31,
@@ -245,7 +365,11 @@
     "nome": "Reilly Doale",
     "cpf": 63851845849,
     "cargo": "Marketing",
-    "salario": 8994
+    "salario": 8994,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 32,
@@ -253,7 +377,11 @@
     "nome": "Kalindi Burehill",
     "cpf": 87232144968,
     "cargo": "Accounting",
-    "salario": 5856
+    "salario": 5856,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 33,
@@ -261,7 +389,11 @@
     "nome": "Cordy Skerrett",
     "cpf": 37462311789,
     "cargo": "Human Resources",
-    "salario": 3232
+    "salario": 3232,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 34,
@@ -269,7 +401,11 @@
     "nome": "Lenna Hechlin",
     "cpf": 57030290964,
     "cargo": "Product Management",
-    "salario": 7862
+    "salario": 7862,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 35,
@@ -277,7 +413,11 @@
     "nome": "Dagmar Paliser",
     "cpf": 89671268975,
     "cargo": "Support",
-    "salario": 8550
+    "salario": 8550,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 36,
@@ -285,7 +425,11 @@
     "nome": "Hamid Collete",
     "cpf": 75171514294,
     "cargo": "Services",
-    "salario": 6446
+    "salario": 6446,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 37,
@@ -293,7 +437,11 @@
     "nome": "Rivkah Girardini",
     "cpf": 85407688294,
     "cargo": "Accounting",
-    "salario": 6114
+    "salario": 6114,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 38,
@@ -301,7 +449,11 @@
     "nome": "Rubia Southcoat",
     "cpf": 50115144792,
     "cargo": "Support",
-    "salario": 8667
+    "salario": 8667,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 39,
@@ -309,7 +461,11 @@
     "nome": "Amargo Wulfinger",
     "cpf": 18041915969,
     "cargo": "Engineering",
-    "salario": 8300
+    "salario": 8300,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   },
   {
     "id": 40,
@@ -317,6 +473,10 @@
     "nome": "Berthe Elwin",
     "cpf": 84133157984,
     "cargo": "Product Management",
-    "salario": 7716
+    "salario": 7716,
+    "foreign_keys": {
+      "id_company": 0,
+      "id_position": 0
+    }
   }
 ]
