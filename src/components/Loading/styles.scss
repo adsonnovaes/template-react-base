@@ -1,0 +1,21 @@
+.loading-container {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circle{
+    animation: is-rotating 1s infinite;
+    border: 0.35rem solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: var(--blue);
+    height: 50px;
+    width: 50px;
+  }
+  
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}

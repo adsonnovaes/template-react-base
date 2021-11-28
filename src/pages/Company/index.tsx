@@ -14,14 +14,28 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
 import { Modal } from '../../components/Modal';
+import { Loading } from '../../components/Loading';
 
 import db from '../../data/companies.json';
+// import { Company } from '../../types/types';
 
 import './styles.scss';
 
+export type CompanyProps = {
+  id: number;
+  nome: string;
+  cnpj: number;
+  funcionarios: number;
+  gastos_totalF: number;
+}
+
 export function Company() {
 
-  // const [companies, setCompanies] = useState<CompanyProps[]>(db);
+  const [companies, setCompanies] = useState<CompanyProps[]>(db);
+
+  const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+
   const [isVisibleModal, setIsVisibleModal] = useState(false);
   const [idCompany, setIdCompany] = useState<number | undefined>();
 
@@ -29,14 +43,14 @@ export function Company() {
     document.title = "Web | Empresa";
   }, []);
 
-  function handleDeleteCompany(id: number|undefined) {
+  function handleDeleteCompany(id: number | undefined) {
     setIsVisibleModal(false);
 
-    if(id === undefined) {
+    if (id === undefined) {
       return;
     }
 
-    if(id) {
+    if (id) {
       var index = db.findIndex(company => {
         return company.id === id;
       })
@@ -48,10 +62,48 @@ export function Company() {
   }
 
   useEffect(() => {
-    if(!!idCompany){
+    if (search != "") {
+      return;
+    }
+    setCompanies(db);
+  }, [search])
+
+  useEffect(() => {
+    if (!!idCompany) {
       setIsVisibleModal(true);
     }
-  },[idCompany]);
+  }, [idCompany]);
+
+  function isNumber(str: any) {
+    return !isNaN(str)
+  }
+
+  function handlerSearch() {
+    setIsLoading(true);
+
+    let filtered: CompanyProps[];
+
+    if (isNumber(search)) {
+      filtered = db.filter(company => {
+        return company.cnpj.toString().includes(search);
+      });
+
+    } else {
+      let lowerSearch = search.toLowerCase();
+
+      filtered = db.filter(company => {
+        return company.nome.toLowerCase().includes(lowerSearch);
+      });
+
+    }
+
+    setCompanies(filtered);
+    setIsLoading(false);
+  }
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [companies])
 
   return (
     <div className="wrapper">
@@ -67,8 +119,12 @@ export function Company() {
               <div className="search">
                 <Input
                   placeholder="Buscar por Nome/CNPJ"
+                  value={search}
+                  onChange={event => setSearch(event.target.value)}
                 />
-                <Button>
+                <Button
+                  onClick={handlerSearch}
+                >
                   Buscar
                 </Button>
               </div>
@@ -81,50 +137,54 @@ export function Company() {
             </Link>
           </div>
 
-          <Table>
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>CNPJ</th>
-                <th>Funcionarios</th>
-                <th>Gastos total com Funcionários</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              {db.map(company => {
-                return (
-                  <tr key={company.id}>
-                    <td>{company.nome}</td>
-                    <td>{FormatCnpj(company.cnpj)}</td>
-                    <td>{company.funcionarios}</td>
-                    <td>{replaceMoney(company.gastos_totalF)}</td>
-                    <td className="text-center">
-                      <Link to={{
-                        pathname: "/dashboard/company/edit",
-                        state: {
-                          company
-                        }
-                      }} id="edit">
-                        <AiOutlineEdit
-                          size={20}
-                        />
-                      </Link>
+          {isLoading ? (
+            <Loading/>
+          ) : (
+            <Table> 
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>CNPJ</th>
+                  <th>Funcionarios</th>
+                  <th>Gastos total com Funcionários</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                {companies.map(company => {
+                  return (
+                    <tr key={company.id}>
+                      <td>{company.nome}</td>
+                      <td>{FormatCnpj(company.cnpj)}</td>
+                      <td>{company.funcionarios}</td>
+                      <td>{replaceMoney(company.gastos_totalF)}</td>
+                      <td className="text-center">
+                        <Link to={{
+                          pathname: "/dashboard/company/edit",
+                          state: {
+                            company
+                          }
+                        }} id="edit">
+                          <AiOutlineEdit
+                            size={20}
+                          />
+                        </Link>
 
-                      <button 
-                        id="delete"
-                        onClick={() => setIdCompany(company.id)}
-                      >
-                        <AiOutlineDelete
-                          size={20}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </Table>
+                        <button
+                          id="delete"
+                          onClick={() => setIdCompany(company.id)}
+                        >
+                          <AiOutlineDelete
+                            size={20}
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  )
+                })
+                }
+              </tbody>
+            </Table>)}
 
         </div>
 

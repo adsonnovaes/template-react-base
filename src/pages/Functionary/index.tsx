@@ -5,6 +5,7 @@ import {
   AiOutlineDelete
 } from 'react-icons/ai';
 
+import { useCompany } from '../../hooks/useCompany';
 import { replaceMoney, formatCPF } from '../../utils/utils';
 
 import { Header } from '../../components/Header';
@@ -18,32 +19,44 @@ import { Modal } from '../../components/Modal';
 import './styles.scss';
 
 import db from '../../data/employees.json';
+import db_company from '../../data/companies.json';
 
 export function Functionary() {
 
   const [isVisibleModal, setIsVisibleModal] = useState(false);
   const [idFunctionary, setIdFunctionary] = useState<number | undefined>();
+  // const [idPosition, setIdPosition] = useState<string | undefined>();
 
   useEffect(() => {
     document.title = "Web | Funcionário";
   }, []);
 
-  function handleDeleteFunctionary(id: number | undefined) {
+  function HandleDeleteFunctionary(
+    id: number | undefined
+  ) {
     setIsVisibleModal(false);
-
+    
     if (id === undefined) {
       return;
     }
+    
+    // if (id != undefined && position != undefined) {
+    //   let idChange = "" + id;
+    //   const { cargo } = useCompany(idChange, position);
 
-    if (id) {
-      var index = db.findIndex(functionary => {
-        return functionary.id === id;
-      })
+    //   var index = db.findIndex(functionary => {
+    //     return functionary.id === id;
+    //   })
 
-      db.splice(index, 1);
+    //   if (cargo != undefined) {
+    //     console.log(db_company[index].gastos_totalF -= cargo.salary);
+    //     console.log(db_company[index].funcionarios--);
+    //   }
+      
+    //   db.splice(index, 1);
 
-      // alert(`Funcionáio ${Deleted}`)
-    }
+    //   // alert(`Funcionáio ${Deleted}`)
+    // }
   }
 
   useEffect(() => {
@@ -118,7 +131,10 @@ export function Functionary() {
 
                       <button
                         id="delete"
-                        onClick={() => setIdFunctionary(functionary.id)}
+                        onClick={() => {
+                          setIdFunctionary(functionary.id)
+                            // setIdPosition(functionary.cargo)
+                        }}
                       >
                         <AiOutlineDelete
                           size={20}
@@ -136,10 +152,11 @@ export function Functionary() {
         <Modal
           isOpen={isVisibleModal}
           setVisibility={() => {
-            setIsVisibleModal(false)
+            setIsVisibleModal(false);
             setIdFunctionary(undefined);
+            // setIdPosition(undefined);
           }}
-          handleConfirmed={() => handleDeleteFunctionary(idFunctionary)}
+          handleConfirmed={() => HandleDeleteFunctionary(idFunctionary)}
         >
           Tem certeza que você deseja excluir este Funcionário?
         </Modal>
