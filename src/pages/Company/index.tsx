@@ -66,7 +66,7 @@ export function Company() {
       return;
     }
     setCompanies(db);
-  }, [search])
+  }, [search]);
 
   useEffect(() => {
     if (!!idCompany) {
@@ -103,7 +103,7 @@ export function Company() {
 
   useEffect(() => {
     setIsLoading(false);
-  }, [companies])
+  }, [companies]);
 
   return (
     <div className="wrapper">

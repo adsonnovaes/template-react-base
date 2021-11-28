@@ -20,8 +20,27 @@ import './styles.scss';
 
 import db from '../../data/employees.json';
 import db_company from '../../data/companies.json';
+import { Loading } from '../../components/Loading';
+
+type FunctionaryProps = {
+  id: number,
+  empresa: string,
+  nome: string,
+  cpf: number,
+  cargo: string,
+  salario: number,
+  foreign_keys: {
+    id_company: number,
+    id_position: number
+  }
+}
 
 export function Functionary() {
+
+  const [employees, setEmployees] = useState<FunctionaryProps[]>(db);
+
+  const [search, setSearch] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const [isVisibleModal, setIsVisibleModal] = useState(false);
   const [idFunctionary, setIdFunctionary] = useState<number | undefined>();
@@ -35,11 +54,11 @@ export function Functionary() {
     id: number | undefined
   ) {
     setIsVisibleModal(false);
-    
+
     if (id === undefined) {
       return;
     }
-    
+
     // if (id != undefined && position != undefined) {
     //   let idChange = "" + id;
     //   const { cargo } = useCompany(idChange, position);
@@ -52,7 +71,7 @@ export function Functionary() {
     //     console.log(db_company[index].gastos_totalF -= cargo.salary);
     //     console.log(db_company[index].funcionarios--);
     //   }
-      
+
     //   db.splice(index, 1);
 
     //   // alert(`Funcionáio ${Deleted}`)
@@ -64,6 +83,44 @@ export function Functionary() {
       setIsVisibleModal(true);
     }
   }, [idFunctionary]);
+
+  useEffect(() => {
+    if (search != "") {
+      return;
+    }
+    setEmployees(db);
+  }, [search]);
+
+  function isNumber(str: any) {
+    return !isNaN(str)
+  }
+
+  function handlerSearch() {
+    setIsLoading(true);
+
+    let filtered: FunctionaryProps[];
+
+    if (isNumber(search)) {
+      filtered = db.filter(employee => {
+        return employee.cpf.toString().includes(search);
+      });
+
+    } else {
+      let lowerSearch = search.toLowerCase();
+
+      filtered = db.filter(employee => {
+        return employee.nome.toLowerCase().includes(lowerSearch);
+      });
+
+    }
+
+    setEmployees(filtered);
+    setIsLoading(false);
+  }
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, [employees]);
 
   return (
     <div className="wrapper">
@@ -79,8 +136,12 @@ export function Functionary() {
               <div className="search">
                 <Input
                   placeholder="Buscar por Nome/CPF"
+                  value={search}
+                  onChange={event => setSearch(event.target.value)}
                 />
-                <Button>
+                <Button
+                  onClick={handlerSearch}
+                >
                   Buscar
                 </Button>
               </div>
@@ -97,55 +158,59 @@ export function Functionary() {
             </div>
           </div>
 
-          <Table>
-            <thead>
-              <tr>
-                <th>Empresa</th>
-                <th>Nome</th>
-                <th>CPF</th>
-                <th>Cargo</th>
-                <th>Salário</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              {db.map(functionary => {
-                return (
-                  <tr key={functionary.id}>
-                    <td>{functionary.empresa}</td>
-                    <td>{functionary.nome}</td>
-                    <td>{formatCPF(functionary.cpf)}</td>
-                    <td>{functionary.cargo}</td>
-                    <td>{replaceMoney(functionary.salario)}</td>
-                    <td className="text-center">
-                      <Link to={{
-                        pathname: "/dashboard/functionary/edit",
-                        state: {
-                          functionary
-                        }
-                      }} id="edit">
-                        <AiOutlineEdit
-                          size={20}
-                        />
-                      </Link>
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <Table>
+              <thead>
+                <tr>
+                  <th>Empresa</th>
+                  <th>Nome</th>
+                  <th>CPF</th>
+                  <th>Cargo</th>
+                  <th>Salário</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                {employees.map(functionary => {
+                  return (
+                    <tr key={functionary.id}>
+                      <td>{functionary.empresa}</td>
+                      <td>{functionary.nome}</td>
+                      <td>{formatCPF(functionary.cpf)}</td>
+                      <td>{functionary.cargo}</td>
+                      <td>{replaceMoney(functionary.salario)}</td>
+                      <td className="text-center">
+                        <Link to={{
+                          pathname: "/dashboard/functionary/edit",
+                          state: {
+                            functionary
+                          }
+                        }} id="edit">
+                          <AiOutlineEdit
+                            size={20}
+                          />
+                        </Link>
 
-                      <button
-                        id="delete"
-                        onClick={() => {
-                          setIdFunctionary(functionary.id)
+                        <button
+                          id="delete"
+                          onClick={() => {
+                            setIdFunctionary(functionary.id)
                             // setIdPosition(functionary.cargo)
-                        }}
-                      >
-                        <AiOutlineDelete
-                          size={20}
-                        />
-                      </button>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </Table>
+                          }}
+                        >
+                          <AiOutlineDelete
+                            size={20}
+                          />
+                        </button>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </Table>
+          )}
 
         </div>
 
