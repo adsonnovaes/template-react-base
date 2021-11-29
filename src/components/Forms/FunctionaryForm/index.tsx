@@ -6,7 +6,6 @@ import { Input } from '../../Input';
 import { Select } from '../../Select';
 
 import db_company from '../../../data/companies.json';
-import db_functionary from '../../../data/employees.json';
 import db_office from '../../../data/office.json';
 
 type FunctionaryProps = {

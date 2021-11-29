@@ -62,7 +62,7 @@ export function Company() {
   }
 
   useEffect(() => {
-    if (search != "") {
+    if (search !== "") {
       return;
     }
     setCompanies(db);

@@ -5,7 +5,6 @@ import {
   AiOutlineDelete
 } from 'react-icons/ai';
 
-import { useCompany } from '../../hooks/useCompany';
 import { replaceMoney, formatCPF } from '../../utils/utils';
 
 import { Header } from '../../components/Header';
@@ -15,12 +14,12 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Table } from '../../components/Table';
 import { Modal } from '../../components/Modal';
+import { Loading } from '../../components/Loading';
 
 import './styles.scss';
 
 import db from '../../data/employees.json';
 import db_company from '../../data/companies.json';
-import { Loading } from '../../components/Loading';
 
 type FunctionaryProps = {
   id: number,

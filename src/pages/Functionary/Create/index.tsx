@@ -10,7 +10,6 @@ import { Sidebar } from '../../../components/Sidebar';
 
 import db_functionary from '../../../data/employees.json';
 import db_company from '../../../data/companies.json';
-import db_office from '../../../data/office.json';
 
 import '../functionary-form.scss';
 

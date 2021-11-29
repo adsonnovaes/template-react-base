@@ -10,7 +10,6 @@ import { Sidebar } from '../../../components/Sidebar';
 
 import db_functionary from '../../../data/employees.json';
 import db_company from '../../../data/companies.json';
-import db_office from '../../../data/office.json';
 
 import '../functionary-form.scss';
 
@@ -37,7 +36,6 @@ type Object = {
 export function EditFunctionary() {
 
   const state = useLocation<Object>().state.functionary;
-  const functionary = state;
   const history = useHistory();
 
   useEffect(() => {
@@ -54,9 +52,12 @@ export function EditFunctionary() {
       
       if (state.foreign_keys.id_company === company.id &&
         state.foreign_keys.id_position !== cargo.id) {
-        console.log(db_company[index].gastos_totalF -= state.salario);
-        console.log(db_company[index].gastos_totalF)
-        console.log(db_company[index].gastos_totalF += cargo.salary);
+
+        // Decrementando o salário antigo
+        db_company[index].gastos_totalF -= state.salario;
+        // Adicionando o salário novo
+        db_company[index].gastos_totalF += cargo.salary;
+
       }
 
       db_functionary[indexFun].empresa = company.nome;
