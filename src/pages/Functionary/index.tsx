@@ -43,39 +43,45 @@ export function Functionary() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [isVisibleModal, setIsVisibleModal] = useState(false);
+
   const [idFunctionary, setIdFunctionary] = useState<number | undefined>();
-  // const [idPosition, setIdPosition] = useState<string | undefined>();
+  const [idCompany, setIdCompany] = useState<number | undefined>();
+  const [salaryCurrent, setSalaryCurrent] = useState<number | undefined>();
 
   useEffect(() => {
     document.title = "Web | Funcionário";
   }, []);
 
   function HandleDeleteFunctionary(
-    id: number | undefined
+    functionaryId: number | undefined,
+    salary: number | undefined,
+    companyId: number | undefined,
   ) {
     setIsVisibleModal(false);
 
-    if (id === undefined) {
+    if (functionaryId === undefined) {
       return;
     }
 
-    // if (id != undefined && position != undefined) {
-    //   let idChange = "" + id;
-    //   const { cargo } = useCompany(idChange, position);
+    if (functionaryId !== undefined && salary !== undefined && companyId !== undefined) {
 
-    //   var index = db.findIndex(functionary => {
-    //     return functionary.id === id;
-    //   })
+      var indexFunctionary = db.findIndex(functionary => {
+        return functionary.id === functionaryId;
+      })
 
-    //   if (cargo != undefined) {
-    //     console.log(db_company[index].gastos_totalF -= cargo.salary);
-    //     console.log(db_company[index].funcionarios--);
-    //   }
+      var indexCompany = db_company.findIndex(company => {
+        return company.id === companyId;
+      })
 
-    //   db.splice(index, 1);
+      if (indexCompany !== undefined) {
+        db_company[indexCompany].gastos_totalF -= salary;
+        db_company[indexCompany].funcionarios--;
+      }
 
-    //   // alert(`Funcionáio ${Deleted}`)
-    // }
+      db.splice(indexFunctionary, 1);
+
+      // alert(`Funcionáio ${Deleted}`)
+    }
   }
 
   useEffect(() => {
@@ -85,7 +91,7 @@ export function Functionary() {
   }, [idFunctionary]);
 
   useEffect(() => {
-    if (search != "") {
+    if (search !== "") {
       return;
     }
     setEmployees(db);
@@ -197,7 +203,8 @@ export function Functionary() {
                           id="delete"
                           onClick={() => {
                             setIdFunctionary(functionary.id)
-                            // setIdPosition(functionary.cargo)
+                            setSalaryCurrent(functionary.salario)
+                            setIdCompany(functionary.foreign_keys.id_company)
                           }}
                         >
                           <AiOutlineDelete
@@ -219,9 +226,10 @@ export function Functionary() {
           setVisibility={() => {
             setIsVisibleModal(false);
             setIdFunctionary(undefined);
-            // setIdPosition(undefined);
+            setSalaryCurrent(undefined);
+            setIdCompany(undefined);
           }}
-          handleConfirmed={() => HandleDeleteFunctionary(idFunctionary)}
+          handleConfirmed={() => HandleDeleteFunctionary(idFunctionary, salaryCurrent, idCompany)}
         >
           Tem certeza que você deseja excluir este Funcionário?
         </Modal>
